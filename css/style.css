@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html{
+    background-color: rgba(26, 26, 26, 1);
+}
+body{
+    font-family: 'Century Gothic', Futura, sans-serif;
+    font-size: 10px;
+    margin : 0;
+    color: #333;
+}
+/* para arreglar el problema de colapso al usar float. */
+.clearfix:after {
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+/*####################### barra de navegacion ################################*/
+nav{
+    border-bottom: 1.5px lightgray  solid;
+    position: fixed;
+    top: 0px;
+    font-size: 14px;
+    width: 100%;
+    background-color: rgba(211,211, 211, 0.6);
+}
+.lista-nav{
+    float: right;
+    padding-right: 15px;
+    text-transform: uppercase;
+    margin: 0;
+    color : gray;
+}
+.lista-item{
+    display: inline-block;
+    padding-left: 10px;
+}
+.lista-item{
+    padding: 15px;
+}
+.lista-item:hover{
+    background-color: rgba(211,211, 211, 0.6);
+}
+.lista-item:hover > a {
+    color:white;
+}
+
+a:hover, a:active, a:focus {
+    color: white;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    /*color: #ff0000;*/
+}
+
+.title{
+    float: left;
+    margin: 0 0 0 50px;
+    line-height: 33px;
+    font-weight: normal;
+    font-size: 1.5em;
+    padding-top: 0.4%;
+}
+/*##################### portada ##########################################*/
+.portada{
+    position: relative;
+    top: 0;
+}
+.title-img{
+    width: 100%;
+    height: 100vh;
+}
+/*###################### acerca de mi ########################################*/
+.about-me{
+    position: relative;
+    top: 500px;
+    display: block;
+    color: white;
+}
+/*##################### experiencia ##########################################*/
+.experiences{
+    display: block;
+    color:white;
+}
+/*##################### habilidades ##########################################*/
+.skills{
+    display: block;
+    color: white;
+}
+/*##################### pie de pagina ########################################*/
+footer {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+	background-color: rgba(0, 0, 0, 0.92);
+	color: white;
+	height: 50px;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: center;
+}
