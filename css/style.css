@@ -68,6 +68,8 @@ nav img{
     display: inline-block;
     padding-left: 10px;
     font-size: 14px;
+}.lista-item a{
+    color: #3e215d;
 }
 .lista-item{
     padding: 15px;
@@ -88,6 +90,15 @@ a, a:link, a:visited {
     text-decoration: none;
     /*color: #ff0000;*/
 }
+.active {
+  	background-color: rgba(211,211, 211, 0.7);
+}
+
+.active-reverse {
+  	color: #101010;
+  	background-color: #F7F7F7;
+}
+
 /*##################### portada ##########################################*/
 .portada{
     position: relative;
@@ -129,7 +140,7 @@ a, a:link, a:visited {
 	font-size: 28px;
 	opacity: 0;
 	animation: subTitleAnimation 3s forwards;
-	animation-delay: 1s;
+	animation-delay: 2.5s;
 }
 @keyframes titleAnimation {
 	0% {
@@ -270,8 +281,10 @@ a, a:link, a:visited {
     font-family: 'Century Gothic', Futura, sans-serif;
     font-size: 13pt;
 }
+
 /*##################### habilidades ##########################################*/
 .skills{
+    padding-top: 100px;
     color: white;
     margin-bottom: 30px;
     color: rgba(255, 255, 255, 0.8);

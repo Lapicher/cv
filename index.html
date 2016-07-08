@@ -9,13 +9,13 @@
       <link rel="stylesheet" href="css/font-awesome.css">
       <link href="css/style.css" rel="stylesheet">
       <link href="css/grid.css" rel="stylesheet">
+      <script src="js/modernizr-custom.js"></script>
     </head>
     <body>
 
         <header class="portada">
             <!--<img class="title-img" src="images/pink-mountain.jpg" alt="señal de batman"></img>-->
             <div class="title-img"></div>
-
 
             <div class="square component-1">
                 <p>Web</p>
@@ -30,14 +30,14 @@
       			<p class="title-cite">“Full Stack Developer” <br> --Lo mejor de internet</p>
         </header>
 
-        <nav class="clearfix">
+        <nav class="clearfix navbar">
           <!--<img src="http://imagenesdeletras.com/wp-content/uploads/2016/04/vinilo-infantil-dibujo-letra-n-917.png" alt="icono">-->
           <!--<img src="http://www.hhasesores.com/hh-new/wp-content/uploads/2016/06/letra-n.png" alt="">-->
           <!--<img src="http://i23.photobucket.com/albums/b375/adribal/nblockPocoyo_zps651c05cc.png" alt="icono">-->
           <h1 class="title">Nataly Contreras</h1>
           <ul class="lista-nav">
-            <li class="lista-item">
-              <a href="#about-me">Perfil</a>
+            <li class="lista-item active">
+              <a href="#profile">Perfil</a>
             </li>
             <li class="lista-item">
                 <a href="#experiences">Experiencia</a>
@@ -51,7 +51,7 @@
           </ul>
         </nav>
 
-        <section class="profile clearfix">
+        <section class="profile clearfix" id="profile">
           <div class="container">
               <div class="row">
                   <div class="col-12">
@@ -91,7 +91,7 @@
                                 </div>
 
                                 <div class="back">
-                                  <img src="images/perfil-crazy.jpg" alt="Perfil anormal">
+                                  <img src="images/leon_roar.jpg" alt="Perfil anormal">
                                 </div>
                               </div>
                           </figure>
@@ -110,7 +110,7 @@
             </div>
         </div>
         </section>
-        <section class="experiences" id="experiences">
+        <section class="experiences clearfix" id="experiences">
               <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -436,4 +436,5 @@
     			Nataly Contreras &copy; 2016 KeepCoding.io
     		</footer>
     </body>
+    <script src="js/menu.js"></script>
 </html>
