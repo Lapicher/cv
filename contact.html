@@ -13,24 +13,26 @@
     <body>
 
         <header class="portada blur-content">
-            <!--<img class="title-img" src="images/pink-mountain.jpg" alt="señal de batman"></img>-->
-            <div class="title-img"><div class="todo"></div>
+            <div class="title-img img-contact"></div>
+            </div>
+            <div class="fondo-formulario clearfix">
 
             </div>
-
         </header>
+
+
 
         <nav class="clearfix">
           <h1 class="title">Nataly Contreras</h1>
           <ul class="lista-nav">
             <li class="lista-item">
-              <a href="#about-me">Perfil</a>
+              <a href="index.html">Perfil</a>
             </li>
             <li class="lista-item">
-                <a href="#experiences">Experiencia</a>
+                <a href="index.html#experiences">Experiencia</a>
             </li>
             <li class="lista-item">
-                <a href="#skills">Habilidades</a>
+                <a href="index.html#skills">Habilidades</a>
             </li>
             <li class="lista-item">
                 <a href="contact.html">Contacto</a>
@@ -39,12 +41,67 @@
         </nav>
 
 
-        <div class="container formulario clearfix">
+        <section class="formulario">
+            <div class="container">
+                <div class="col-4 izq">
+                      <div class="row">
+                           <h2>Contáctame</h2>
+                      </div>
+                      <div class="row">
+                           <p class="saludo">
+                             Si desea realizar una consulta, no dude en ponerse en contacto, y
+                             responderé tan pronto como sea posible.
+                            Si prefiere ponerse en contacto conmigo directamente, envíe su correo
+                             electrónico a:
 
-        </div>
+                             <span>nataly@natalycontreras.com</span>
+                           </p>
+                      </div>
+                </div>
+                <div class="col-8 der">
+                    <form action="enviar" id="form-contact" class="form" name="contact-user" method="get" novalidate>
+                      <div class="row datos">
+                          <h3>Nombre:</h3>
+                          <input type="text" id="nombre" size="50px" placeholder="Nombre" required>
+                      </div>
+                      <div class="row datos">
+                          <h3>Email:</h3>
+                          <input id="email" size="50px" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required></input>
+                      </div>
+                      <div class="row datos">
+                          <h3>¿Como me has conocido?</h3>
+                          <select name="combo" id="combo">
+                            <option value="amigos">Amigos</option>
+                            <option value="internet">Internet</option>
+                            <option value="trabajo">Trabajo</option>
+                            <option value="otros">Otros</option>
+                          </select>
+                      </div>
+                      <div class="row datos">
+                            <h3>Número:</h3>
+                            <input type="number" id="numero" type="text" placeholder="Tel" required>
+                      </div>
+                      <div class="row datos">
+                            <h3>Mensaje:</h3>
+                            <span class="info">*Máximo 150 palabras.</span>
+                            <span id="indicator">0</span>
+                            <textarea id="message" rows="4" cols="50"></textarea>
+                      </div>
+                      <div class="row datos">
+                          <button  type="submit" class="row" id="enviar">Enviar</button>
+                      </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+        </section>
+
 
         <footer class="footer">
     			Nataly Contreras &copy; 2016 KeepCoding.io
     		</footer>
+        <script src="js/form-validation.js"></script>
     </body>
 </html>

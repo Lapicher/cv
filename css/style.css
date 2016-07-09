@@ -376,11 +376,62 @@ i:hover{
     color: #05cc47;
 }
 /*########################## APARTADO CONTACTO ###############################*/
-.todo{
+.img-contact{
+    height: 96vh;
+}
+.fondo-formulario{
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 100%;
-    height: 90vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+}
+.der{
+    border-left: 3px double;
+    border-color: #827f82;
+    font-size: 10pt;
+    font-weight: normal;
+}
+.formulario{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    -webkit-box-shadow: 4px 15px 48px 8px rgba(0,0,0,0.59);
+    -moz-box-shadow: 4px 15px 48px 8px rgba(0,0,0,0.59);
+    box-shadow: 4px 15px 48px 8px rgba(0,0,0,0.59);
+    background-color: #f0edf0;
+}
+.datos{
+    padding: 20px;
+}
+.info{
+    display: inline;
+}
+.datos button{
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    font-size: 12pt;
+}
+.datos input[type=button], .datos input[type=submit], .datos input[type=reset], button {
+  	background-color: #4CAF50;
+  	border: none;
+  	color: white;
+  	padding: 15px 40px;
+  	text-decoration: none;
+  	margin: 4px 2px;
+  	cursor: pointer;
+  	border-radius: 0px;
+}
+#indicator{
+    display: block;
+    color: red;
+}
+.izq{
+    font-size: 12pt;
+    padding: 0px 20px;
+}
+.saludo span{
+    color: #4CAF50;
 }
