@@ -6,8 +6,15 @@ enviar.addEventListener("click",function(evt){
 //evento de presionar la tecla para la validacion del numero.
 var number=document.getElementById('numero');
 number.addEventListener("keydown",function(evt){
-    console.log(this.value.toString().length);
-    if(this.value.toString().length>9)
+
+    //console.log(evt.keyCode);
+    //internet Explorer
+    if((evt.keyCode<48 || evt.keyCode>57) && evt.keyCode!=8){
+        console.log( "letra: "+evt.keyCode);
+        evt.preventDefault();
+    }
+    //console.log(this.value.toString());
+    if(this.value.toString().length>9 && evt.keyCode!=8)
         evt.preventDefault();
 });
 //evento de presionar tecla para validar las 150 palabras.
@@ -28,23 +35,44 @@ var form=document.getElementById('form-contact');
 form.addEventListener("submit",function(evt){
 
     var nombre=document.getElementById('nombre');
-
+    var email=document.getElementById('email');
+    var otros=document.getElementById('others');
+    var numero=document.getElementById('numero');
+    /*
     if(nombre.checkValidity()==false){
         alert("Escribe tu nombre");
         evt.preventDefault();
     }
-    var email=document.getElementById('email');
     if(email.checkValidity()==false){
         alert("Escribe un email valido!");
         evt.preventDefault();
     }
-    var otros=document.getElementById('others');
+
     if(otros!=null && otros.checkValidity()==false){
         alert('Escribe otros medios de haberme conocido!');
         evt.preventDefault();
     }
-    var numero=document.getElementById('numero');
     if(numero.checkValidity()==false){
+        alert("Escribe un número correcto");
+        evt.preventDefault();
+    }
+    */
+    //internet explorer
+    if(nombre.value==""){
+        alert("Escribe tu nombre");
+        evt.preventDefault();
+    }
+    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+    if (!emailRegex.test(email.value)) {
+        alert("Escribe un email valido!");
+        evt.preventDefault();
+    }
+    if(otros!=null && otros.value==""){
+        alert('Escribe otros medios de haberme conocido!');
+        evt.preventDefault();
+    }
+    if(numero.value==""){
         alert("Escribe un número correcto");
         evt.preventDefault();
     }
