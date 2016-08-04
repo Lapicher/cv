@@ -30,11 +30,11 @@ h2{
     color: gray;
     text-transform: uppercase;
 }
-hr{
-    opacity: 0.3;
-    margin-bottom: 50px;
+/* estilo para los bordes de separacion en todas las secciones */
+.titulos{
+    padding-bottom: 20px;
+    border-bottom: 2pt solid rgba(255, 255, 255, 0.3);
 }
-
 /*####################### barra de navegacion ################################*/
 nav{
     border-bottom: 1.5px lightgray  solid;
@@ -231,7 +231,6 @@ a, a:link, a:visited {
     display: block;
     color: rgba(255, 255, 255, 0.8);
 }
-
 .picture-profile img{
     height: 190px;
     border-radius: 50%;
