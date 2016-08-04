@@ -43,6 +43,7 @@ nav{
     width: 100%;
     font-size: 14px;
     background-color: rgba(211,211, 211, 0.6);
+    z-index: 1;
 }
 nav img{
     height: 45px;
@@ -268,6 +269,10 @@ a, a:link, a:visited {
 }
 .data{
     margin-left: 30px;
+}
+.data span{
+    font-weight: bold;
+    font-size: 1.3em;
 }
 .about-me p{
     margin-right: 70px;
