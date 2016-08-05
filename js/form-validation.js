@@ -19,17 +19,33 @@ number.addEventListener("keydown",function(evt){
 });
 //evento de presionar tecla para validar las 150 palabras.
 var mensaje=document.getElementById('message');
-mensaje.addEventListener("keydown",function(evt){
-      var palabras=150;
-      var arrPalabras=this.value.toString().split(" ");
-      if(arrPalabras.length>palabras && evt.keyCode!=8)
-          evt.preventDefault();
-      else{
-          if(arrPalabras.length<=palabras)
-              document.getElementById('indicator').innerHTML=arrPalabras.length;
-      }
+mensaje.setAttribute("onpaste","return false;");
+mensaje.palabras=150;
+mensaje.addEventListener("keyup",function(evt){
 
+      var arrPalabras=this.value.toString().split(' ');
+      var totalPalabras=0;
+      for(var i in arrPalabras){
+          if(arrPalabras[i].length!=0 && arrPalabras[i]!="\n"){
+              var enters=arrPalabras[i].split("\n");
+              for(var j in enters){
+                  if(enters[j].length!=0)
+                      totalPalabras++;
+              }
+          }
+      }
+      //console.log("total palabras: "+totalPalabras);
+      //console.log(this.palabras);
+      if(totalPalabras>this.palabras && evt.keyCode!=8){
+          var texto=this.value.toString();
+          this.value=texto.substring(0,texto.length-1);
+      }
+      else{
+          if(totalPalabras<=this.palabras)
+              document.getElementById('indicator').innerHTML=totalPalabras;
+      }
 });
+
 //evento de envio del formulario.
 var form=document.getElementById('form-contact');
 form.addEventListener("submit",function(evt){
