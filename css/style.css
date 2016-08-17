@@ -224,6 +224,22 @@ a, a:link, a:visited {
     background-color: rgba(26, 26, 26, 0.5);
     padding-bottom: 30px;
 }
+/* fix internet explorer */
+.no-cssanimations .square{
+  visibility: visible;
+	width: 15%;
+	height: 200px;
+	font-size: 3em;
+}
+.no-cssanimations .square p {
+	position: relative;
+	top: 25%;
+	margin-top: auto;
+	width: 100%;
+}
+.no-cssanimations .title-cite{
+    opacity: 1;
+}
 /*###################### acerca de mi ########################################*/
 .profile{
     font-size: 12pt;
@@ -263,6 +279,7 @@ a, a:link, a:visited {
   	transform: rotateY(0);
   	-webkit-transform: rotateY(0);
 }
+
 .details{
     border-left: 2px solid #7d205c;
 }
@@ -275,6 +292,9 @@ a, a:link, a:visited {
 }
 .about-me p{
     margin-right: 70px;
+}
+.no-cssanimations .back{
+    display: none;
 }
 /*##################### experiencia ##########################################*/
 .ed-tipo i{
